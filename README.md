@@ -22,41 +22,40 @@ B --> C[PostgreSQL]
 
 ## Database Design
 
-```text
-Department
-------------
-id
-name
+```mermaid
+erDiagram
 
-        │
-        │
-        ▼
+    DEPARTMENT ||--o{ EMPLOYEE : has
+    POSITION ||--o{ EMPLOYEE : has
+    STATUS ||--o{ EMPLOYEE : has
 
-Employee
-------------
-id
-name
-address
-manager
-image
+    DEPARTMENT {
+        bigint id PK
+        string name
+        bigint manager_id FK
+    }
 
-department_id
-position_id
-status_id
+    POSITION {
+        bigint id PK
+        string name
+        decimal salary
+    }
 
-        ▲
-        │
+    STATUS {
+        bigint id PK
+        string name
+    }
 
-Position
-------------
-id
-name
-salary
-
-Status
-------------
-id
-name
+    EMPLOYEE {
+        bigint id PK
+        string name
+        text address
+        boolean manager
+        string image
+        bigint department_id FK
+        bigint position_id FK
+        bigint status_id FK
+    }
 ```
 
 ## Features
