@@ -115,24 +115,37 @@ pip install -r requirements.txt
 
 ---
 
-## Database
+## Database Configuration
 
-Create PostgreSQL database
+### Create a PostgreSQL database
 
-```
+Create a database named:
+
+```text
 employee_db
 ```
 
-Update
+### Configure database settings
 
-```
+Open:
+
+```text
 config/settings/development.py
 ```
 
-Configure
+Update the `DATABASES` configuration:
 
-```
-DATABASES
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "employee_db",
+        "USER": "postgres",
+        "PASSWORD": "your_password",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
+}
 ```
 
 ---
