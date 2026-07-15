@@ -147,6 +147,22 @@ DATABASES = {
     }
 }
 ```
+### Using Docker
+
+If you are running the project with Docker Compose, use:
+
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "employee_db",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",
+        "PORT": "5432",
+    }
+}
+```
 
 ---
 
