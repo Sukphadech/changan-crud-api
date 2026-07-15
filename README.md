@@ -1,5 +1,13 @@
 # Employee Management System
 
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Django](https://img.shields.io/badge/Django-6.0-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-blue)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
+![Tests](https://img.shields.io/badge/Tests-20_Passed-brightgreen)
+
+A CRUD RESTful API built with Django REST Framework.
+
 A CRUD RESTful API built with Django REST Framework for managing employees, departments, positions, and statuses.
 
 ## Features
