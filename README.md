@@ -90,7 +90,7 @@ erDiagram
 Clone the repository
 
 ```bash
-[git clone <repository-url>](https://github.com/Sukphadech/changan-crud-api)
+git clone https://github.com/Sukphadech/changan-crud-api.git
 ```
 
 Create Virtual Environment
