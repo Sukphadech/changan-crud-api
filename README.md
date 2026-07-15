@@ -6,9 +6,58 @@
 ![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
 ![Tests](https://img.shields.io/badge/Tests-20_Passed-brightgreen)
 
-A CRUD RESTful API built with Django REST Framework.
-
 A CRUD RESTful API built with Django REST Framework for managing employees, departments, positions, and statuses.
+
+## Architecture
+
+```mermaid
+graph TD
+
+A[Client]
+
+A --> B[Django REST Framework]
+
+B --> C[PostgreSQL]
+```
+
+## Database Design
+
+```text
+Department
+------------
+id
+name
+
+        │
+        │
+        ▼
+
+Employee
+------------
+id
+name
+address
+manager
+image
+
+department_id
+position_id
+status_id
+
+        ▲
+        │
+
+Position
+------------
+id
+name
+salary
+
+Status
+------------
+id
+name
+```
 
 ## Features
 
